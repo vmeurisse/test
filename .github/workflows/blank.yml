@@ -33,8 +33,9 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo $TERM
-          echo "::error file=app.js,line=1::Missing semicolon"
+          echo "::error file=LICENSE,line=1::Missing semicolon"
           echo ::group::test
           echo ::warning:: warning
           echo "Inside group"
           echo ::endgroup::
+          echo -e "\e[31mThis text is red,\e[0m but this text isn't\e[31m however this text is red again."
